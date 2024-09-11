@@ -57,7 +57,7 @@ This project is built to demonstrate the following:
 python -m venv venv
 source venv/bin/activate
 
-# On Windows, use `venv\Scripts\activate`
+On Windows, use `venv\Scripts\activate`
 
 3. Install the required dependencies:
 
@@ -85,7 +85,7 @@ pip install vertexai streamlit python-dotenv
 
 source venv/bin/activate
 
-# For Windows: `venv\Scripts\activate`
+For Windows: `venv\Scripts\activate`
 
 2. Run the Streamlit application:
    streamlit run app.py
