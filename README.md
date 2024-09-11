@@ -49,12 +49,15 @@ This project is built to demonstrate the following:
 
 1. Clone the repository
    git clone https://github.com/natko22/rex-google-gemini-chat.git
+
    cd rex-google-gemini-chat
 
 2. Create a virtual environment and activate it:
 
 python -m venv venv
-source venv/bin/activate # On Windows, use `venv\Scripts\activate`
+source venv/bin/activate
+
+# On Windows, use `venv\Scripts\activate`
 
 3. Install the required dependencies:
 
@@ -80,7 +83,9 @@ pip install vertexai streamlit python-dotenv
 
 1. Activate the virtual environment (if not already active):
 
-source venv/bin/activate # For Windows: `venv\Scripts\activate`
+source venv/bin/activate
+
+# For Windows: `venv\Scripts\activate`
 
 2. Run the Streamlit application:
    streamlit run app.py
@@ -91,4 +96,4 @@ http://localhost:8501
 
 ### License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License.
