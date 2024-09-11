@@ -1,0 +1,14 @@
+# Ignore virtual environment folder
+env/
+
+# Ignore Python cache files
+__pycache__/
+
+# Ignore specific scripts (if needed)
+startup.py
+example.py
+streamlit_demo.py
+example2.ipynb
+
+# Ignore the .env file for environment variables
+.env

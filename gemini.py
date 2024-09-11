@@ -2,9 +2,14 @@ import vertexai
 import streamlit as st
 from vertexai.preview import generative_models
 from vertexai.preview.generative_models import GenerativeModel, GenerationConfig
+from dotenv import load_dotenv
+import os
 
-# Set your Google Cloud project ID as a string
-project = "gemini-explorer-434508"
+# Load environment variables from the .env file
+load_dotenv()
+
+# Set your Google Cloud project ID from the environment variable
+project = os.getenv("PROJECT_ID")
 
 # Initialize Vertex AI with the project
 vertexai.init(project=project)
@@ -32,12 +37,12 @@ def llm_function(chat, user_input, user_name="User"):
         # Accessing the response safely
         if hasattr(response, 'candidates') and len(response.candidates) > 0:
             candidate = response.candidates[0]
-            # Access the content parts safely
+            # Access the content parts safely and write it for debugging
             if hasattr(candidate, 'content') and hasattr(candidate.content, 'parts'):
-                part = candidate.content.parts  # Directly access the parts object
+                st.write(f"Content parts: {candidate.content.parts}")
+                part = candidate.content.parts  # Access parts object
                 if hasattr(part, 'text'):
-                    # Extract the text without additional encoding or decoding
-                    response_text = part.text.strip()
+                    response_text = part.text.strip()  # Extract the text
                 else:
                     response_text = "No valid text found in the response."
             else:
